@@ -1,0 +1,18 @@
+/*
+[Exercises 9] Cari Pelaku
+https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-cari-pelaku.md
+*/
+
+function cariPelaku(str) {
+  var res=str.match(/abc/g);
+  if(res===null){return 0;}
+  else {return res.length;}
+}
+
+// TEST CASES
+console.log(cariPelaku('mabcvabc')); // 2
+console.log(cariPelaku('abcdabdc')); // 1
+console.log(cariPelaku('bcabcac')); // 1
+console.log(cariPelaku('abcabcabc')); // 3
+console.log(cariPelaku('babcbacabc')); // 2
+
