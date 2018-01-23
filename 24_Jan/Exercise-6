@@ -1,0 +1,21 @@
+/*
+[Exercises 6] Kali Terus Rekursif
+https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-kali-terus.md
+*/
+
+function kaliTerusRekursif(angka) {
+  angka=String(angka);
+  if(angka.length>1) {
+    return kaliTerusRekursif(Number(angka[0])*kaliTerusRekursif(Number(angka.slice(1))));
+  }
+  else {
+    return angka
+  }
+}
+
+// TEST CASES
+console.log(kaliTerusRekursif(66)); // 8
+console.log(kaliTerusRekursif(3)); // 3
+console.log(kaliTerusRekursif(24)); // 8
+console.log(kaliTerusRekursif(654)); // 0
+console.log(kaliTerusRekursif(1231)); // 6

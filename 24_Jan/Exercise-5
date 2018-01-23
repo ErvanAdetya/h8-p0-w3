@@ -1,0 +1,21 @@
+/*
+[Exercises 5] Total Digit Rekursif
+https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-total-digit.md
+*/
+
+function totalDigitRekursif(angka) {
+  angka=String(angka);
+  if(angka.length>1) {
+    return Number(angka[0])+totalDigitRekursif(Number(angka.slice(1)));
+  }
+  else {
+    return Number(angka);
+  }
+}
+
+// TEST CASES
+console.log(totalDigitRekursif(512)); // 8
+console.log(totalDigitRekursif(1542)); // 12
+console.log(totalDigitRekursif(5)); // 5
+console.log(totalDigitRekursif(21)); // 3
+console.log(totalDigitRekursif(11111)); // 5
